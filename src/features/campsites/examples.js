@@ -35,3 +35,27 @@ const CampsiteCard = ({campsite}) => {
 export default CampsiteCard;
 
 */
+
+/* UseState() Component
+//inside the App.js
+//import {useState} from 'react';
+//older version
+//Const App =() => {
+    const myreValFromUsestate = useState(0);
+    const myCounter = retValFromUseState[0];
+    const setMyCounter = retValUseState[1];
+}
+
+//shorter version 
+cons App = () => {
+    const [myCounter, setMyCounter] - useState(0);
+    //------const [name, setName] = useState('Irene')
+
+    return (
+        <div onClick ={() => setMyCounter(myCounter + 1)}>
+          Count: {myCounter}
+        </div>
+    );
+};
+
+*/
