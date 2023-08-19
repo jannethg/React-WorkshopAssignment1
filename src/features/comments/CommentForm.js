@@ -30,35 +30,36 @@ const CommentForm = ({campsiteId}) => {
             >                
                 <ModalHeader toggle={() => setModalOpen(false)} >
                     Add Comment
-                </ModalHeader>                
-                <Formik
-                    initialValues={{
-                    rating: '',
-                    author: '',
-                    commentText: ''                    
-                    }}
-                    onSubmit={handleSubmit}
-                    validate={validateCommentForm}
-                >
-                    <ModalBody>
+                </ModalHeader>  
+                <ModalBody>              
+                    <Formik
+                        initialValues={{
+                        rating: undefined,
+                        author: '',
+                        commentText: ''                    
+                        }}
+                        onSubmit={handleSubmit}
+                        validate={validateCommentForm}
+                    >
+                
                         <Form>
                             <FormGroup>
                                 <Label htmlFor='rating'>Rating</Label>
-                                    <Field
-                                        name='rating'
-                                        as='select'
-                                        className='form-control'
-                                    >
-                                        <option>Select...</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                    </Field>
-                                    <ErrorMessage name='rating'>
-                                        {(msg) => <p className='text-danger'>{msg}</p> }
-                                    </ErrorMessage>
+                                <Field
+                                    name='rating'
+                                    as='select'
+                                    className='form-control'
+                                >
+                                    <option>Select...</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </Field>
+                                <ErrorMessage name='rating'>
+                                    {(msg) => <p className='text-danger'>{msg}</p> }
+                                </ErrorMessage>
                             </FormGroup>
                             <FormGroup>
                                 <Label htmlFor='author'>Your Name</Label>
@@ -83,9 +84,9 @@ const CommentForm = ({campsiteId}) => {
                             <Button type='submit' color='primary'>
                                 Submit
                             </Button>
-                        </Form>
-                        </ModalBody>
-                </Formik>
+                        </Form>                        
+                    </Formik>
+                </ModalBody>
             </Modal>
            
         </>
