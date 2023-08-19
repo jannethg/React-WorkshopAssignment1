@@ -7,7 +7,7 @@ const HomePage = () => {
     return (
         <Container>
         <SubHeader current='Home' />
-            <DisplayList />teest 1;lkj;skjdf;l kdsjf;lds kjf
+            <DisplayList />
         </Container>
 
     );
