@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+import logger from 'redux-logger'
 import { campsitesReducer } from '../features/campsites/campsitesSlice';
 import { commentsReducer } from '../features/comments/commentsSlice';
 import { partnersReducer } from '../features/partners/partnersSlice';
@@ -10,7 +11,9 @@ export const store = configureStore({
         comments: commentsReducer,
         partners: partnersReducer,
         promotions: promotionsReducer
-    }
+    }, 
+    middleware: (getDefaultMiddleWare)  => getDefaultMiddleWare().concat([logger])
+    //middleware lets us see whats going on everytime we dispatch an action. 
 });
 
 
