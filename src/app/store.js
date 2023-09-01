@@ -4,17 +4,18 @@ import { campsitesReducer } from '../features/campsites/campsitesSlice';
 import { commentsReducer } from '../features/comments/commentsSlice';
 import { partnersReducer } from '../features/partners/partnersSlice';
 import { promotionsReducer} from '../features/promotions/promotionsSlice';
+import { userReducer } from '../features/user/userSlice';
 
 export const store = configureStore({
     reducer: {
         campsites: campsitesReducer,        
         comments: commentsReducer,
         partners: partnersReducer,
-        promotions: promotionsReducer
+        promotions: promotionsReducer,
+        user: userReducer
     }, 
     middleware: (getDefaultMiddleWare)  => getDefaultMiddleWare().concat([logger])
-    //middleware lets us see whats going on everytime we dispatch an action. 
+    //this middleware lets you see whats going on everytime we dispatch an action. 
 });
 
 
-// console.log(store.getState());
