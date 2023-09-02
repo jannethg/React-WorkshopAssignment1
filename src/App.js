@@ -20,8 +20,8 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchCampsites());   //when our app component is first mounted, it will fire off the Campsites dispatchers
-    dispatch(fetchPartners());   //when our app component is first mounted, it will fire off the Partners dispatchers
+    dispatch(fetchCampsites());   
+    dispatch(fetchPartners());   
     dispatch(fetchPromotions());
     dispatch(fetchComments());
   }, [dispatch]);

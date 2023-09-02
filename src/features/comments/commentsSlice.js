@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 // import { COMMENTS } from '../../app/shared/oldData/COMMENTS';
 import { baseUrl } from '../../app/shared/baseUrl';
-import { mapImageURL } from '../../utils/mapImageURL';
+
 
 export const fetchComments = createAsyncThunk(
     'comments/fetchComments',
@@ -58,7 +58,7 @@ const commentsSlice = createSlice({
         [fetchComments.fulfilled]: (state, action) => {
             state.isLoading = false;
             state.errMsg = '';
-            state.commentsArray = mapImageURL(action.payload);
+            state.commentsArray = action.payload;
         },
         [fetchComments.rejected]: (state, action) => {
             state.isLoading = false;

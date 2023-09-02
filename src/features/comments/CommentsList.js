@@ -14,17 +14,13 @@ const CommentsList = ({ campsiteId }) => {
 
     if (isLoading) {
         return (
-            <Row>
-                <Loading />
-            </Row>
+            <Loading />            
         );
     }
 
     if (errMsg) {
-        return (
-            <Row>
-                <Error errMsg={errMsg} />
-            </Row>
+        return (            
+            <Error errMsg={errMsg} />           
         );
     }
 
