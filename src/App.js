@@ -12,6 +12,7 @@ import AboutPage from './pages/AboutPage';
 import { fetchCampsites } from './features/campsites/campsitesSlice';
 import { fetchPartners } from './features/partners/partnersSlice';
 import { fetchPromotions } from './features/promotions/promotionsSlice';
+import { fetchComments } from './features/comments/commentsSlice';
 import './App.css';
 
 
@@ -22,6 +23,7 @@ function App() {
     dispatch(fetchCampsites());   //when our app component is first mounted, it will fire off the Campsites dispatchers
     dispatch(fetchPartners());   //when our app component is first mounted, it will fire off the Partners dispatchers
     dispatch(fetchPromotions());
+    dispatch(fetchComments());
   }, [dispatch]);
 
   return (
